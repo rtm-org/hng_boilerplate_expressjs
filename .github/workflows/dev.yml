@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: bp-runner
+    runs-on: self-hosted
     defaults:
       run:
         working-directory: /var/www/aihomework/boilerplate/dev

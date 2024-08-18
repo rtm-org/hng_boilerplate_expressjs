@@ -9,7 +9,7 @@ jobs:
     environment: 
       name: preview
       url: ${{ steps.deploy.outputs.preview-url }}
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout the branch
         uses: actions/checkout@v4
