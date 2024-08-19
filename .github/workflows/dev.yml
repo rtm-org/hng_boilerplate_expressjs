@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted
+    runs-on: hng-ubuntu-runners
     defaults:
       run:
         working-directory: /var/www/aihomework/boilerplate/dev

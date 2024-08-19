@@ -9,7 +9,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted
+    runs-on: hng-ubuntu-runners
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
