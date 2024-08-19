@@ -20,13 +20,30 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install dependencies
-        run: yarn install
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
+        # env:
+        #   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # if needed
 
-      - name: Run tests
-        run: yarn test
-        env:
-          CI: true
+      - name: Test the app
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: test # will run `yarn test` command
           
-      - name: Build the dist
-        run: yarn build
+      - name: Build production bundle
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build # will run `yarn build:prod` command
+  
+      # - name: Install dependencies
+      #   run: yarn install
+
+      # - name: Run tests
+      #   run: yarn test
+      #   env:
+      #     CI: true
+          
+      # - name: Build the dist
+      #   run: yarn build
